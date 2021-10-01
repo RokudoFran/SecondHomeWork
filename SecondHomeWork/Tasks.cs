@@ -235,37 +235,6 @@ namespace SecondHomeWork
                     break;
             }
 
-            switch (ed)
-            {
-                case 1:
-                    Message = Message + " Один";
-                    break;
-                case 2:
-                    Message = Message + " Два";
-                    break;
-                case 3:
-                    Message = Message + " Три";
-                    break;
-                case 4:
-                    Message = Message + " Четыре";
-                    break;
-                case 5:
-                    Message = Message + " Пять";
-                    break;
-                case 6:
-                    Message = Message + " Шесть";
-                    break;
-                case 7:
-                    Message = Message + " Семь";
-                    break;
-                case 8:
-                    Message = Message + " Восемь";
-                    break;
-                case 9:
-                    Message = Message + " Девять";
-                    break;
-            }
-
             switch (des)
             {
                 case 20:
