@@ -204,102 +204,46 @@ namespace SecondHomeWork
                Message = "Необходимо двухзначное число большее 10 и меньшее 99";
             }
 
-            switch (A)
+            Message = A switch
             {
-                case 10:
-                    Message = "Десять";
-                    break;
-                case 11:
-                    Message = "Одинадцать";
-                    break;
-                case 12:
-                    Message = "Двенадцать";
-                    break;
-                case 13:
-                    Message = "Тринадцать";
-                    break;
-                case 14:
-                    Message = "Четырнадцать";
-                    break;
-                case 15:
-                    Message = "Пятнадцать";
-                    break;
-                case 16:
-                    Message = "Шестнадцать";
-                    break;
-                case 17:
-                    Message = "Семнадцать";
-                    break;
-                case 18:
-                    Message = "Восемндацать";
-                    break;
-                case 19:
-                    Message = "Девятнадцать";
-                    break;
-            }
+                10 => "Десять",
+                11 => "Одинадцать",
+                12 => "Двенадцать",
+                13 => "Тринадцать",
+                14 => "Четырнадцать",
+                15 => "Пятнадцать",
+                16 => "Шестнадцать",
+                17 => "Семнадцать",
+                18 => "Восемндацать",
+                19 => "Девятнадцать",
+            };
 
-            switch (des)
+            Message = des switch
             {
-                case 20:
-                    Message = "Двадцать";
-                    break;
-                case 30:
-                    Message = "Тридцать";
-                    break;
-                case 40:
-                    Message = "Сорок";
-                    break;
-                case 50:
-                    Message = "Пятьдесят";
-                    break;
-                case 60:
-                    Message = "Шестьдесят";
-                    break;
-                case 70:
-                    Message = "Семь";
-                    break;
-                case 80:
-                    Message = "Восемьдесят";
-                    break;
-                case 90:
-                    Message = "Девяносто";
-                    break;
-                default:
-                    break;
-            }
+                20 => "Двадцать",
+                30 => "Тридцать",
+                40 => "Сорок",
+                50 => "Пятьдесят",
+                60 => "Шестьдесят",
+                70 => "Семь",
+                80 => "Восемьдесят",
+                90 => "Девяносто",
+            };
 
-            switch (ed)
+            Message += ed switch
             {
-                case 1:
-                    Message += " Один";
-                    break;
-                case 2:
-                    Message += " Два";
-                    break;
-                case 3:
-                    Message += " Три";
-                    break;
-                case 4:
-                    Message += " Четыре";
-                    break;
-                case 5:
-                    Message += " Пять";
-                    break;
-                case 6:
-                    Message += " Шесть";
-                    break;
-                case 7:
-                    Message += " Семь";
-                    break;
-                case 8:
-                    Message += " Восемь";
-                    break;
-                case 9:
-                    Message += " Девять";
-                    break;
-                default:
-                    break;
-            }
+                0 => "",
+                1 => " Один",
+                2 => " Два",
+                3 => " Три",
+                4 => " Четыре",
+                5 => " Пять",
+                6 => " Шесть",
+                7 => " Семь",
+                8 => " Восемь",
+                9 => " Девять",
+            };
+
 
             return Message;
         }
