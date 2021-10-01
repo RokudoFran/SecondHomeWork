@@ -98,48 +98,11 @@ namespace SecondHomeWork
         {
             string Message = "";
 
-            if (A == B && B == C)
-            {
-                Message = A + " " + B + " " + C;
-            }
-            else if ((A == B || A == C) && (A > C || A > B))
-            {
-                if (A == B)
-                {
-                    Message = A + " " + B + " " + C;
-                }
-                else
-                {
-                    Message = A + " " + C + " " + B;
-                }
-            }
-            else if ( ( B == C ) && ( ( B > A ) || ( B < A ) ) )
-            {
-                if ( B > A )
-                {
-                    Message = B + " " + C + " " + A;
-                }
-                else
-                {
-                    Message = A + " " + B + " " + C;
-                }
-            }
-            else if ((A > B) && ((B > C) || ((B < C) && (A > C))))
+            if ( ( A > B) && ( A > C ) )
             {
                 if ( B > C )
                 {
-                    Message = A + " " + B + " " + C;
-                }
-                else
-                {
-                    Message = A + " " + C + " " + B;
-                }
-            }
-            else if ((B > A) && ((A > C) || ((A < C) && (B > C))))
-            {
-                if ( A > C )
-                {
-                    Message = B + " " + A + " " + C;
+                    Message = C + " " + B + " " + A;
                 }
                 else
                 {
@@ -148,13 +111,27 @@ namespace SecondHomeWork
             }
             else
             {
-                if ( B > A )
+                if ( B > C)
                 {
-                    Message = C + " " + B + " " + A;
+                    if ( C > A )
+                    {
+                        Message = A + " " + C + " " + B;
+                    }
+                    else
+                    {
+                        Message = C + " " + A + " " + B;
+                    }
                 }
                 else
                 {
-                    Message = C + " " + A + " " + B;
+                    if ( B > A)
+                    {
+                        Message = A + " " + B + " " + C;
+                    }
+                    else
+                    {
+                        Message = B + " " + A + " " + C;
+                    }
                 }
             }
 
@@ -243,7 +220,6 @@ namespace SecondHomeWork
                 8 => " Восемь",
                 9 => " Девять",
             };
-
 
             return Message;
         }
