@@ -196,6 +196,9 @@ namespace SecondHomeWork
 
             int des = 0, ed = 0;
 
+            des = A / 10;
+            ed = A % 10;
+
             if (A > 99 || A < 10)
             {
                Message = "Необходимо двухзначное число";
