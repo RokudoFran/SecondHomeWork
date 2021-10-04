@@ -9,179 +9,177 @@ namespace SecondHomeWork
     class Tasks
     {
         //Если A>B, подсчитать A+B, если A=B, подсчитать A*B, если A<B, подсчитать A-B.
-
-        public static string Exercise1(float A, float B)
+        public static string Exercise1(float a, float b)
         {
             float rezult = 0;
 
-            string Message = "";
+            string message = "";
 
-            if (A == B)
+            if (a == b)
             {
-                rezult = A * B;
+                rezult = a * b;
 
-                Message = $"При A = B , A * B = {rezult}";
+                message = $"При A = B , A * B = {rezult}";
             }
-            else if (A > B)
+            else if (a > b)
             {
-                rezult = A + B;
+                rezult = a + b;
 
-                Message = $"При A > B , A + B = {rezult}";
+                message = $"При A > B , A + B = {rezult}";
             }
             else
             {
-                rezult = A - B;
+                rezult = a - b;
 
-                Message = $"При A < B , A - B = {rezult}";
+                message = $"При A < B , A - B = {rezult}";
             }
 
-            return Message;
+            return message;
         }
 
         //Пользователь вводит 2 числа(X и Y). Определить какой четверти принадлежит точка с координатами(X, Y)
-
-        public static string Exercise2(float X, float Y)
+        public static string Exercise2(float x, float y)
         {
             
-            string Message = "";
+            string message = "";
             
-            if (X==0)
+            if (x==0)
             {
-                if (Y>0)
+                if (y>0)
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на верхней части оси Y";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на верхней части оси Y";
                 }
-                else if (Y==0)
+                else if (y==0)
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на начальной точке оси координат";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на начальной точке оси координат";
                 }
                 else
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на нижней части оси Y";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на нижней части оси Y";
                 }
             }
-            else if (X > 0)
+            else if (x > 0)
             {
-                if (Y==0)
+                if (y==0)
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на правой части оси X";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на правой части оси X";
                 }
-                else if (Y>0)
+                else if (y>0)
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на I четверти оси координат";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на I четверти оси координат";
                 }
                 else
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на IV четверти оси координат";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на IV четверти оси координат";
                 }
             }
             else
             {
-                if (Y == 0)
+                if (y == 0)
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на леовой части оси X";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на леовой части оси X";
                 }
-                else if (Y > 0)
+                else if (y > 0)
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на II четверти оси координат";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на II четверти оси координат";
                 }
                 else
                 {
-                    Message = $"Точка с координатами ( {X} : {Y} ), лежит на III четверти оси координат";
+                    message = $"Точка с координатами ( {x} : {y} ), лежит на III четверти оси координат";
                 }
             }
-            return Message;
+            return message;
         }
 
         //Пользователь вводит 3 числа(A, B и С). Выведите их в консоль в порядке возрастания.
-        public static string Exercise3 (float A, float B, float C)
+        public static string Exercise3 (float a, float b, float c)
         {
-            string Message = "";
+            string message = "";
 
-            if ( ( A > B) && ( A > C ) )
+            if ( ( a > b) && ( a > c ) )
             {
-                if ( B > C )
+                if ( b > c )
                 {
-                    Message = C + " " + B + " " + A;
+                    message = c + " " + b + " " + a;
                 }
                 else
                 {
-                    Message = B + " " + C + " " + A;
+                    message = b + " " + c + " " + a;
                 }
             }
             else
             {
-                if ( B > C)
+                if ( b > c)
                 {
-                    if ( C > A )
+                    if ( c > a )
                     {
-                        Message = A + " " + C + " " + B;
+                        message = a + " " + c + " " + b;
                     }
                     else
                     {
-                        Message = C + " " + A + " " + B;
+                        message = c + " " + a + " " + b;
                     }
                 }
                 else
                 {
-                    if ( B > A)
+                    if ( b > a)
                     {
-                        Message = A + " " + B + " " + C;
+                        message = a + " " + b + " " + c;
                     }
                     else
                     {
-                        Message = B + " " + A + " " + C;
+                        message = b + " " + a + " " + c;
                     }
                 }
             }
 
-            return Message;
+            return message;
         }
 
         //Пользователь вводит 3 числа (A, B и С). Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AXX+BX+C=0.
-        public static string Exercise4(float A, float B, float C)
+        public static string Exercise4(float a, float b, float c)
         {
-            string Message = "";
+            string message = "";
 
-            double X, X1, X2, D;
+            double x, x1, x2, d;
 
-            D = B * B - 4 * A * C;
+            d = b * b - 4 * a * c;
 
-            if (D < 0)
+            if (d < 0)
             {
-                Message = $" Нет решения для уравнения {A}*X*X + {B}*X + {C} = 0 , т.к. дескриминант = {D} меньше 0 ";
+                message = $" Нет решения для уравнения {a}*X*X + {b}*X + {c} = 0 , т.к. дескриминант = {d} меньше 0 ";
             }
-            else if (D == 0)
+            else if (d == 0)
             {
-                X = -B / 2 * A;
-                Message = $" Для уравнения {A}*X*X + {B}*X + {C} = 0, при дескриминанте равном нулю решением для уравнения будет X={X} ";
+                x = -b / 2 * a;
+                message = $" Для уравнения {a}*X*X + {b}*X + {c} = 0, при дескриминанте равном нулю решением для уравнения будет X={x} ";
             }
             else
             {
-                X1 = (-B + Math.Sqrt(D)) / 2 * A;
-                X2 = (-B - Math.Sqrt(D)) / 2 * A;
-                Message = $" Для уравнения {A}*X*X + {B}*X + {C} = 0,  решением для уравнения будет X1={X1} и X2={X2} ";
+                x1 = (-b + Math.Sqrt(d)) / 2 * a;
+                x2 = (-b - Math.Sqrt(d)) / 2 * a;
+                message = $" Для уравнения {a}*X*X + {b}*X + {c} = 0,  решением для уравнения будет X1={x1} и X2={x2} ";
             }
 
-            return Message;
+            return message;
         }
 
         //Пользователь вводит двузначное число.Выведите в консоль прописную запись этого числа. Например при вводе “25” в консоль будет выведено “двадцать пять”.
-        public static string Exercise5(int A)
+        public static string Exercise5(int a)
         {
-            string Message = "";
+            string message = "";
 
             int des = 0, ed = 0;
 
-            des = A / 10;
-            ed = A % 10;
+            des = a / 10;
+            ed = a % 10;
 
-            if (A > 99 || A < 10)
+            if (a > 99 || a < 10)
             {
-               Message = "Необходимо двухзначное число большее 10 и меньшее 99";
+               message = "Необходимо двухзначное число большее 10 и меньшее 99";
             }
 
-            Message = A switch
+            message = a switch
             {
                 10 => "Десять",
                 11 => "Одинадцать",
@@ -195,7 +193,7 @@ namespace SecondHomeWork
                 19 => "Девятнадцать",
             };
 
-            Message = des switch
+            message = des switch
             {
                 20 => "Двадцать",
                 30 => "Тридцать",
@@ -207,7 +205,7 @@ namespace SecondHomeWork
                 90 => "Девяносто",
             };
 
-            Message += ed switch
+            message += ed switch
             {
                 0 => "",
                 1 => " Один",
@@ -221,7 +219,7 @@ namespace SecondHomeWork
                 9 => " Девять",
             };
 
-            return Message;
+            return message;
         }
     }
 }
